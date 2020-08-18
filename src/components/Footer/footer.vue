@@ -43,13 +43,15 @@
 
 <style lang="less" scoped>
     .footer{
-        position: absolute;
+        position: fixed;
         border-top: solid 1px #f6f6f6 ;
         bottom: 0;
         width: 750px;
         height: 98px;
         display: flex;
         color: #B5B5B5;
+        background-color: #fff;
+        z-index: 999;
         .isChoice{
             color: #E55359;
             font-weight: bold;

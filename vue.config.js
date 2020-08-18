@@ -14,4 +14,13 @@ module.exports = {
             }
         }
     },
+    devServer : {
+        proxy : {
+            '/api':{
+                target:"https://m.you.163.com",
+                pathRewrite :{'^/api':''},
+                changeOrigin:true,
+            }
+        }
+    }
 }
