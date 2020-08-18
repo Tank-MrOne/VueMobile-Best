@@ -1,0 +1,86 @@
+{
+  "id": "2012796",
+  "name": "best",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "124857",
+      "name": "微博",
+      "font_class": "weibo",
+      "unicode": "e643",
+      "unicode_decimal": 58947
+    },
+    {
+      "icon_id": "970752",
+      "name": "微信",
+      "font_class": "weixin",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "11776588",
+      "name": "qq",
+      "font_class": "qq",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "4867111",
+      "name": "邮箱",
+      "font_class": "youxiang",
+      "unicode": "e65e",
+      "unicode_decimal": 58974
+    },
+    {
+      "icon_id": "8348143",
+      "name": "手机",
+      "font_class": "shouji",
+      "unicode": "e71f",
+      "unicode_decimal": 59167
+    },
+    {
+      "icon_id": "9743018",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e67e",
+      "unicode_decimal": 59006
+    },
+    {
+      "icon_id": "1509760",
+      "name": "图片",
+      "font_class": "image",
+      "unicode": "e674",
+      "unicode_decimal": 58996
+    },
+    {
+      "icon_id": "1638357",
+      "name": "首页",
+      "font_class": "shouye",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "2066003",
+      "name": "个人",
+      "font_class": "geren",
+      "unicode": "e680",
+      "unicode_decimal": 59008
+    },
+    {
+      "icon_id": "5193156",
+      "name": "柜子",
+      "font_class": "jiajutubiao-",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "5849184",
+      "name": "购物车",
+      "font_class": "gouwuche",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    }
+  ]
+}

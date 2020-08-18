@@ -1,19 +1,21 @@
 <template>
-  <div></div>
+  <div class="app">
+    <router-view></router-view>
+    <Footer v-if="!$route.meta.isHide" />
+  </div>
 </template>
 
 <script>
-
+import Footer from './components/Footer/footer'
 export default {
-
+  components:{
+    Footer
+  }
 }
 </script>
 
 <style lang="less">
-
-    div{
-        width:1rem;   
-        height: 1rem;
-        background-color: #bfa;
-    }
+  .app{
+    height: 100%;
+  }
 </style>

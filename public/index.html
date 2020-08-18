@@ -5,21 +5,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title><%= htmlWebpackPlugin.options.title %></title>
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
   </head>
   <body>
-    <div id="app"></div>
-    <script>
-      function adapter(){
-          // 获取手机独立像素值(必须开启完美视口)
-          const w = document.documentElement.clientWidth
-          const rootFontSize =  w / 10
-          document.body.style.fontSize = "16px"
-          document.documentElement.style.fontSize = rootFontSize+"px"	
-      }
-    adapter()
-      
-      // 当窗口大小发生改变会触发这个事件
-    window.onresize = adapter
-  </script>
+    <div id="app" style="height: 100%;"></div>
   </body>
 </html>
