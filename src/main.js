@@ -5,6 +5,7 @@ import router from './router'
 import 'lib-flexible/flexible'
 import * as API from './api'
 import waterfall from 'vue-waterfall2'
+import 'swiper/dist/css/swiper.min.css'
 
 Vue.use(waterfall)
 Vue.config.productionTip = false

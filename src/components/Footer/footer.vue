@@ -51,7 +51,7 @@
         display: flex;
         color: #B5B5B5;
         background-color: #fff;
-        z-index: 999;
+        z-index: 10;
         .isChoice{
             color: #E55359;
             font-weight: bold;

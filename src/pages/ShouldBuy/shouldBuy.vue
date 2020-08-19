@@ -1,9 +1,9 @@
 <template>
   <div class="shouldBuy">
     <header>
-      <router-link to="/" class="iconfont icon-shouye home"></router-link>
+      <router-link to="/" class="iconfont icon-shouye home" style="padding:0;background:#fff"></router-link>
       <router-link to="/cart" class="iconfont icon-gouwuche right"></router-link>
-      <router-link to="/" class="iconfont icon-sousuo right"></router-link>
+      <router-link to="/search" class="iconfont icon-sousuo right"></router-link>
       <div>值得买</div>
     </header>
     <main>
@@ -13,8 +13,9 @@
         <span>严选好物 用心生活</span>
       </div>
       <div class="content">
-        <div class="swiper-container" ref="mySwiper">
-          <div class="swiper-wrapper">
+
+        <div class="wrapper" ref="mySwiper2">
+          <div class="content">
             <div class="swiper-slide" v-for="item in message.navList" :key="item.id">
               <div class="box">
                 <img :src="item.picUrl" alt="" class="navImage">
@@ -23,17 +24,9 @@
               </div>
             </div>
           </div>
-          <!-- 如果需要分页器 -->
-          <div class="swiper-pagination"></div>
-
-          <!-- 如果需要导航按钮 -->
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-
-          <!-- 如果需要滚动条 -->
-          <div class="swiper-scrollbar"></div>
         </div>
 
+        
         <WaterFall/>
       </div>
       
@@ -45,7 +38,7 @@
 
 
 <script type="text/ecmascript-6">
-import Swiper from "swiper";
+import betterScroll from "better-scroll";
 import {reqGetShouldBuyMessage} from '../../api'
 import WaterFall from './waterFall/waterFall.vue'
 import axios from 'axios'
@@ -58,31 +51,30 @@ export default {
       message:[]
     }
   },
+  watch: {
+    message(newVal) {
+        this.$nextTick(() => {
+            this.showScroll();
+        })
+    },
+  },
   async mounted() {
-    this.startSwiper()
-    
     let result = await reqGetShouldBuyMessage()
     this.message = result.data.data
   },
   methods: {
-    startSwiper() {
-      new Swiper(this.$refs.mySwiper, {
-        direction: "horizontal", // 方向
-        slidesPerView : 8,
-        // 如果需要分页器
-        pagination : '.swiper-pagination',
-        paginationType : 'fraction',
-
-        // 如果需要前进后退按钮
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+    showScroll() {
+      new betterScroll(this.$refs.mySwiper2, {
+        scrollX: true,
+        scrollY: false,
+        slide: {
+          loop: true,
+          threshold: 100,
         },
-
-        // 如果需要滚动条
-        scrollbar: {
-          el: ".swiper-scrollbar",
-        },
+        momentum: false,
+        bounce: false,
+        stopPropagation: true,
+        // aotoplay:true
       });
     },
   },
@@ -164,14 +156,14 @@ export default {
       padding-top: 20px ;padding-bottom: 107.4px;
       padding-left: 5px;
       box-sizing: border-box;
-      .swiper-container {
-        width: 603.26px;
+      .wrapper {
+        // width: 603.26px;
         height: 462.5px;
         border-radius: 15px;
         overflow: hidden;
         background-color: #fff;
-        .swiper-wrapper{
-          width: 1300px;
+        .content{
+          // width: 603.26px;
           .swiper-slide {
             box-sizing: border-box;
             float: left;

@@ -1,9 +1,9 @@
 <template>
   <div class="user">
     <header>
-      <router-link to="/" class="iconfont icon-shouye home"></router-link>
+      <router-link to="/" class="iconfont icon-shouye home" style="padding:0;background:#fff"></router-link>
       <router-link to="/cart" class="iconfont icon-gouwuche right"></router-link>
-      <router-link to="/" class="iconfont icon-sousuo right"></router-link>
+      <router-link to="/search" class="iconfont icon-sousuo right"></router-link>
       <div>
          网易严选
       </div>
@@ -26,12 +26,11 @@ export default {
   },
   data(){
       return{
-          type:2
+          type:0
       }
   },
   methods:{
       changeType(num){
-          console.log("111");
           this.type = num
       }
   }

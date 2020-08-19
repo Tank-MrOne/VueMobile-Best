@@ -5,7 +5,7 @@ import axios from "axios"
 //创建axios新实例，修改两个属性
 const instance = axios.create({
     baseURL : '/api',
-    timeout : 15000
+    timeout : 20000
 })
 
 //注册请求拦截器
