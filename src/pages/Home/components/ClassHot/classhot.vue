@@ -4,7 +4,7 @@
           
           
           <span>{{item.categoryName}}</span>
-          <img :src="item.picUrl" alt="">
+          <img v-lazy="item.picUrl" alt="">
       </div>
   </div>
 </template>

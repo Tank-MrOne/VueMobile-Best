@@ -13,13 +13,13 @@
         >{{item.name}}</span>
       </div>
       <div class="right">
-        <img v-if="bannerUrl" :src="bannerUrl" class="titleImg" />
+        <img v-if="bannerUrl" v-lazy="bannerUrl" class="titleImg" />
         <div  v-else  class="scroll">
             <MySwiper :list="category.currentCategory && category.currentCategory.bannerList" />
         </div>
         <div class="categoryList" v-if="category.categoryL2List">
           <div class="items" v-for="item in category.categoryL2List" :key="item.id">
-            <img :src="item.wapBannerUrl" alt v-if="item.wapBannerUrl" />
+            <img @click="toShopList(item.superCategoryId,item.id)" v-lazy="item.wapBannerUrl" alt v-if="item.wapBannerUrl" />
             {{item.name}}
           </div>
         </div>
@@ -57,6 +57,7 @@ export default {
   },
   mounted() {
     this.getCategoryList();
+    // this.
   },
   methods: {
     async getCategoryList(id) {
@@ -71,6 +72,10 @@ export default {
       }
       this.category = result.data.data;
     },
+    toShopList(categoryId,subCategoryId){
+      this.$store.dispatch('getShopList',{categoryId,subCategoryId})
+      this.$router.push('/shoplist')
+    }
   },
 };
 </script>

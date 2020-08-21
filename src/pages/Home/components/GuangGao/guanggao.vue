@@ -24,7 +24,7 @@
       <div class="box" v-for="(item,index) in guanggaoList" :key="index">
           <div>{{item.title}}</div>
           <span>{{item.subTitle}}</span>
-          <img :src="item.picUrl" alt="">
+          <img v-lazy="item.picUrl" alt="">
       </div>
     </div>
   </div>

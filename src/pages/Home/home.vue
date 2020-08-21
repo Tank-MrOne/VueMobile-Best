@@ -37,7 +37,7 @@
       <div class="swiper-container" ref="bannerScroll">
         <div class="swiper-wrapper">
           <div class="swiper-slide" v-for="item in homeInfo.focusList" :key="item.id">
-            <img :src="item.picUrl" alt />
+            <img  v-lazy="item.picUrl" alt />
           </div>
         </div>
         <!-- 如果需要分页器 -->

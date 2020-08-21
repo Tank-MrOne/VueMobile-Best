@@ -10,12 +10,12 @@
     >
       <template>
         <div class="cell-item" v-for="(item,index) in data" :key="index">
-          <img v-if="item.look.picUrl" :src="item.look.picUrl" alt="加载错误" class="waterImg" />
+          <img v-if="item.look.picUrl" v-lazy="item.look.picUrl" alt="加载错误" class="waterImg" />
           <div class="item-body">
             <div class="item-desc">{{item.look.content}}</div>
           </div>
           <div class="avator">
-            <img :src="item.look.avatar" alt />
+            <img v-lazy="item.look.avatar" alt />
             <span>{{item.look.nickname}}</span>
             <i class="right iconfont icon-yanjing">{{item.look.readCount}}</i>
           </div>

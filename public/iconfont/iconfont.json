@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "8288835",
+      "name": "耳机",
+      "font_class": "erji",
+      "unicode": "e848",
+      "unicode_decimal": 59464
+    },
+    {
       "icon_id": "1288189",
       "name": "钱",
       "font_class": "money",

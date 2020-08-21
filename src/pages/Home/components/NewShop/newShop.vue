@@ -6,7 +6,7 @@
     </div>
     <div class="content">
       <div class="list" v-for="item in newShopList" :key="item.id">
-        <img :src="item.listPicUrl" v-if="item.listPicUrl" />
+        <img v-lazy="item.listPicUrl" v-if="item.listPicUrl" />
         <span v-if="item.name" class="money">{{item.name}}</span>
         <span v-if="item.counterPrice" class="oldmoney">￥{{item.counterPrice}}</span>
         <div class="tag" v-if="item.itemTagList">

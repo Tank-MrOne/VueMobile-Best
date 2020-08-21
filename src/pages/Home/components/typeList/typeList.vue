@@ -1,7 +1,7 @@
 <template>
     <div class="typeList">
         <div v-for="item in typeList" :key="item.text">
-            <img :src="item.picUrl" alt="">
+            <img v-lazy="item.picUrl" alt="">
             <span>{{item.text}}</span>
         </div>
     </div>

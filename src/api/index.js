@@ -41,3 +41,12 @@ export function reqSendSearch(value){
 }
 
 // https://m.you.163.com/xhr/search/search.json?keyword=蓝牙耳机&sortType=0&descSorted=false&categoryId=0&matchType=0&floorPrice=-1&upperPrice=-1&size=40&itemId=0&stillSearch=false&searchWordSource=7&needPopWindow=true&_stat_search=autoComplete
+
+
+// https://m.you.163.com/item/list.json?categoryId=11&subCategoryId=9999954658781
+export function reqGetShopList(categoryId,subCategoryId){
+    return ajax({
+        url:'/item/list.json?categoryId='+categoryId+'&subCategoryId='+subCategoryId,
+        method:'get'
+    })
+}

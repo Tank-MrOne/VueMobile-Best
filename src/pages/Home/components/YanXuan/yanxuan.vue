@@ -4,7 +4,7 @@
       <div class="title">{{item.styleItem.title}}</div>
       <div class="desc">{{item.styleItem.desc}}</div>
       <div class="img">
-        <img v-for="(url,index) in item.styleItem.picUrlList" :key="index" :src="url" />
+        <img v-for="(url,index) in item.styleItem.picUrlList" :key="index" v-lazy="url" />
       </div>
     </div>
   </div>
